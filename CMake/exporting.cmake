@@ -1,0 +1,6 @@
+
+# ----- Create api.hpp
+GENERATE_EXPORT_HEADER(${PROJECT_NAME}
+        BASE_NAME ${PROJECT_UPPER_NAME}
+        EXPORT_FILE_NAME ${CMAKE_CURRENT_SOURCE_DIR}/Library/include/${PROJECT_NAME}/api.hpp
+        )

@@ -1,0 +1,8 @@
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE "${PROJECT_UPPER_NAME}_BUILD=1")
+set_target_properties(${PROJECT_NAME}
+        PROPERTIES
+        POSITION_INDEPENDENT_CODE 1
+        CXX_VISIBILITY_PRESET hidden
+        VISIBILITY_INLINES_HIDDEN 1
+        SOVERSION ${PROJECT_VERSION})

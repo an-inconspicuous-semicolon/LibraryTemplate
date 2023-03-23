@@ -8,6 +8,9 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Dependencies
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/CMake
         DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/packaging/)
 
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt
+        DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/packaging/)
+
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/CMake/templates/installing.cmake
         DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/packaging/CMake/
         RENAME packaging.cmake)

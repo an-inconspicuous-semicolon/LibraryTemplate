@@ -12,11 +12,11 @@ include(CMake/libraries.cmake)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(${PROJECT_NAME} SHARED Library/src/library.cpp ${LIBRARY_INCLUDE_PATH}/${PROJECT_NAME}/api.hpp Library/include/LibraryTemplate/library.hpp Dependencies/some_lib/src/Lib.cpp Dependencies/some_lib/include/Lib.hpp)
-target_include_directories(LibraryTemplate
+add_library(${PROJECT_NAME} SHARED Library/src/library.cpp ${LIBRARY_INCLUDE_PATH}/${PROJECT_NAME}/api.hpp Library/include/LibraryTemplate/library.hpp)
+target_include_directories(${PROJECT_NAME}
         PUBLIC ${LIBRARY_INCLUDE_PATH}
         PRIVATE ${LIBRARY_INCLUDE_PATH}/${PROJECT_NAME})
-target_link_libraries(LibraryTemplate
+target_link_libraries(${PROJECT_NAME}
         PUBLIC
         PRIVATE some_lib)
 

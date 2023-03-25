@@ -22,8 +22,12 @@ install(FILES
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt
         DESTINATION ${INSTALL_DIRECTORY})
 
-
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Library
+        DESTINATION ${INSTALL_DIRECTORY})
+
+install(FILES
+        COPYING
+        COPYING.LESSER
         DESTINATION ${INSTALL_DIRECTORY})
 
 install(CODE "execute_process(COMMAND

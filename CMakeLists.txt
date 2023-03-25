@@ -6,9 +6,7 @@ project(LibraryTemplate
         LANGUAGES CXX)
 set(PROJECT_SHORT_NAME tmplt)
 
-include(CMake/macros.cmake)
-include(CMake/environment.cmake)
-include(CMake/libraries.cmake)
+include(CMake/pre_lib.cmake)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -20,7 +18,4 @@ target_link_libraries(${PROJECT_NAME}
         PUBLIC
         PRIVATE some_lib)
 
-include(CMake/options.cmake)
-include(CMake/exporting.cmake)
-include(CMake/testing.cmake)
-include(CMake/packaging.cmake)
+include(CMake/post_lib.cmake)

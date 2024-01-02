@@ -42,6 +42,12 @@ include_matches = re.findall(
     content
 )
 
+include_matches = set(include_matches)
+include_matches = sorted(include_matches)
+
+define_matches = set(define_matches)
+define_matches = sorted(define_matches)
+
 output = f"// Auto generated: Do not edit!\n\n{"\n".join(define_matches)}{"\n".join(include_matches)}"
 
 print("--- Comparing old files")

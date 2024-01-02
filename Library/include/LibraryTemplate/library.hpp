@@ -4,7 +4,9 @@
 
 #pragma once
 
+#include "api.hpp"
+
 /**
  * @brief Test Documentation
  */
-void hello();
+LIBRARYTEMPLATE_EXPORT void hello();

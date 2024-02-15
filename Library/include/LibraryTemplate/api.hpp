@@ -8,21 +8,21 @@
 #else
 #  ifndef LIBRARYTEMPLATE_EXPORT
 #    ifdef LibraryTemplate_EXPORTS
-/* We are building this library */
-#      define LIBRARYTEMPLATE_EXPORT __declspec(dllexport)
+        /* We are building this library */
+#      define LIBRARYTEMPLATE_EXPORT __attribute__((visibility("default")))
 #    else
-/* We are using this library */
-#      define LIBRARYTEMPLATE_EXPORT __declspec(dllimport)
+        /* We are using this library */
+#      define LIBRARYTEMPLATE_EXPORT __attribute__((visibility("default")))
 #    endif
 #  endif
 
 #  ifndef LIBRARYTEMPLATE_NO_EXPORT
-#    define LIBRARYTEMPLATE_NO_EXPORT
+#    define LIBRARYTEMPLATE_NO_EXPORT __attribute__((visibility("hidden")))
 #  endif
 #endif
 
 #ifndef LIBRARYTEMPLATE_DEPRECATED
-#  define LIBRARYTEMPLATE_DEPRECATED __declspec(deprecated)
+#  define LIBRARYTEMPLATE_DEPRECATED __attribute__ ((__deprecated__))
 #endif
 
 #ifndef LIBRARYTEMPLATE_DEPRECATED_EXPORT

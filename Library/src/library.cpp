@@ -65,9 +65,6 @@
 #include <version>
 #include <stop_token>
 #include <coroutine>
-#include <d3d12.h>
-#include <windows.h>
-#include <dxgi1_6.h>
 // */
 
 #include "library.hpp"

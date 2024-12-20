@@ -1,0 +1,3 @@
+[submodule "CMake/pch_generator"]
+	path = CMake/pch_generator
+	url = https://github.com/an-inconspicuous-semicolon/pch_generator
